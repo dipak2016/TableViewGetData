@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface ViewController : UIViewController<NSURLSessionDelegate,UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableDictionary *dict_mute;
+    NSMutableArray *arr_mute;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tbl_vw;
 @end
 
